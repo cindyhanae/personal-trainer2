@@ -1,0 +1,121 @@
+#toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: lightskyblue;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+/* FAZENDO AS BARRAS com ::before e ::after*/
+#toggle::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+
+#toggle::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    transform: translateY(5px);
+    transition: 0.2s;
+}
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+#navbar{
+    position: relative;
+    height: 4rem;
+    right: 4rem;
+    transition: 0.5s;
+    width: 0px;
+    overflow: hidden;
+}
+
+/* TAMANHOA DA NAVBAR QUANO EXPANDE */
+#navbar.active {
+    width: 500px;
+}
+
+#navbar ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar ul li a{
+    color: #FC6D6D;
+    text-decoration: none;
+    height: 4rem;
+    line-height: 4rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    letter-spacing: 1.5px;
+}
+
+#navbar ul li a:hover{
+    color: white;
+    background-color: lightskyblue;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #f5f5f5;
+    font-size: 18vw;
+    font-weight: 700;
+}
+
+/* MENU RESPONSIVO */
+@media (max-width: 991px){
+    #navbar{
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar.active{
+        height: calc(100vh - 4rem);
+        bottom: 0%;
+        width: 100%;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
