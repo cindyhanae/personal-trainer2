@@ -9,7 +9,6 @@
 
 body{
     background-color: #1B1A22;
-    overflow: hidden;
 }
 
 header{
@@ -32,5 +31,3 @@ header{
     text-decoration: none;
     padding-left: 25px;
 }
-
-
