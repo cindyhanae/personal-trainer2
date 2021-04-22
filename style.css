@@ -51,9 +51,14 @@ header{
     text-decoration: none;
 }
 
+.logo:hover {
+    color: var(--clr-primary);
+}
+
 /* BANNER SECTION */
-h1{
-    color: white;
+h2{
+    color: var(--clr-tertiary);
+    font-weight: var(--font-bolder);
 }
 span.espacador{
     color: var(--clr-primary);
@@ -67,7 +72,7 @@ section#home-intro{
     height: 100vh;
     display: flex;
     overflow: hidden;
-    background: url(imagens/pexels-anush-gorak-1229356.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/pexels-binyamin-mellish-17840.jpg);
     background-size: cover;
     background-attachment: scroll;
     background-position: center center;
@@ -111,6 +116,24 @@ div.banner>h2{
     justify-content: center;
     align-items: center;
     border: 1px solid red;
+}
+
+.home-wo{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/krakenimages-4l8UH4G2_Dg-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.gym-wo{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/total-shape-wXBK9JrM0iU-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.cf-wo{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/pexels-leon-ardho-2468339.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 .imgSvg {
