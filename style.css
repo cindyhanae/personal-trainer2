@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,11 +8,25 @@
     font-family: sans-serif;
     font-size: 15px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root{
+    --clr-bg: #1B1A22;
+    --clr-primary: #ee4646;
+    --clr-primary-lighter: #FC6D6D;
+    --clr-secondary: #03ca98;
+    --clr-tertiary: #f5f5f5;
+    --font-size: 15px;
+    --font-bold: 600;
+    --font-bolder: 700;
+    --font-title: 35px;
+    --font-subtitle: 25px;
+    --font-title: font-family: 'Arimo', sans-serif;
+    --font-txt: font-family: 'Work Sans', sans-serif;
 }
 
 body{
-    background-color: #1B1A22;
-    overflow: hidden;
+    background-color: var(--clr-bg);
 }
 
 header{
@@ -26,11 +43,81 @@ header{
 .logo {
     height: 4rem;
     line-height: 4rem;
-    color: #ee4646;
-    font-weight: 700px;
-    font-size: 2rem;
-    text-decoration: none;
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+    font-family: var(--font-title);
+    font-weight: var(--font-bolder);
     padding-left: 25px;
+    text-decoration: none;
+}
+
+/* BANNER SECTION */
+h1{
+    color: white;
+}
+span.espacador{
+    color: var(--clr-primary);
+    font-size: 13rem;
+    
+}
+
+section#home-intro{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background: url(imagens/pexels-anush-gorak-1229356.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+}
+
+section div.banner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 
+div.banner>h2{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 12rem;
+    line-height: 100vh;
+    color: var(--clr-tertiary);
+    animation: banner 480s linear infinite;
+}
+
+@keyframes banner {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* SERVIÇOS SECTION */
+#servicos {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-servico {
+    flex-basis: 100%;/*deixa todas as box de tamanho igual*/
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.imgSvg {
+    width: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+    border: 1px solid blue;
+}
