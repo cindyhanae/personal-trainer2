@@ -1,3 +1,4 @@
+////////// NAVBAR
 //Fazendo o X
 //primeiro, eu recupero o #toggle e #navbar. depois, a cada click eu mudo a class para .active ou sem classe.
 const toggle = document.getElementById('toggle')
@@ -17,4 +18,24 @@ toggle.onclick = function() {
     navbar.classList.toggle('active')
 }
 
+/////////// NAVBAR SCROLLED: quando .home-intro sumir da tela ou aparecer, vai ativar ou desativar o observer
+const headerScroll = document.querySelector('header')
+const homeIntro = document.querySelector('#home-intro')
+
+const homeIntroOptions = {
+    //bg muda antes de #home-intro desaparecer completamente da tela, por isso o -
+    rootMargin: '-200px 0px 0px 0px'
+}
+
+const homeIntroObserver = new IntersectionObserver(function (entries, homeIntroObserver){
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            headerScroll.classList.add('nav-scrolled')
+        } else {
+            headerScroll.classList.remove('nav-scrolled')
+        }
+    })
+}, homeIntroOptions)
+
+homeIntroObserver.observe(homeIntro)
 
