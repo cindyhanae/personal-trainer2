@@ -19,8 +19,8 @@
     --font-size: 15px;
     --font-bold: 600;
     --font-bolder: 700;
-    --font-title: 35px;
-    --font-subtitle: 25px;
+    --font-size-title: 35px;
+    --font-size-subtitle: 25px;
     --font-title: font-family: 'Arimo', sans-serif;
     --font-txt: font-family: 'Work Sans', sans-serif;
 }
@@ -105,33 +105,27 @@ div.banner>h2{
 
 /* SERVIÇOS SECTION */
 #servicos {
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: white;
     display: flex;
     flex-direction: row;
 }
 
-.box-servico {
-    flex-basis: 100%;/*deixa todas as box de tamanho igual*/
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-}
-
 .home-wo{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/krakenimages-4l8UH4G2_Dg-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(imagens/krakenimages-4l8UH4G2_Dg-unsplash.jpg);
     background-position: center center;
     background-size: cover;
 }
 
+
 .gym-wo{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/total-shape-wXBK9JrM0iU-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(imagens/total-shape-wXBK9JrM0iU-unsplash.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .cf-wo{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagens/pexels-leon-ardho-2468339.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(imagens/pexels-leon-ardho-2468339.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -141,6 +135,62 @@ div.banner>h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 4rem;
-    border: 1px solid blue;
+    /* padding-top: 4rem; */
 }
+
+.overlay-title{
+    color: var(--clr-secondary);
+    padding: 10px 0px;
+    font-size: var(--font-size-title);
+}
+
+.overlay-txt{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.box-servico {
+    flex-basis: 100%;/*deixa todas as box de tamanho igual*/
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: relative;
+}
+
+.conteudo-overlay{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;/*coloca os elementos um em cima do outro*/
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /*vai esconder o conteudo*/
+    transition: linear 0.3s;
+}
+
+/* vou afetar todo child direto de .conteudo-overlay, ou seja, as tags img / h3 / p */
+.conteudo-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    /* primeiro eu faço o conteúdo sumir para depois no hover eu mudar o translateY e fazer aparecer */
+}
+
+.conteudo-overlay:hover{
+    opacity: 1; /*mostra o conteúdo*/
+}
+
+.conteudo-overlay:hover > * {
+    transform: translateY(0);
+    /*fazendo aparecer do bottom*/
+}
+
+
+
+
+
