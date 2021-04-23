@@ -39,3 +39,13 @@ const homeIntroObserver = new IntersectionObserver(function (entries, homeIntroO
 
 homeIntroObserver.observe(homeIntro)
 
+
+
+// ////////MOUSE OVER IMAGE
+function entrou() {
+    console.log('entrou')
+}
+
+function saiu(){
+    console.log('saiu')
+}
