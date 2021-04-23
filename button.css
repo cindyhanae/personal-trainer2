@@ -1,0 +1,88 @@
+/* BUTTON */
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 10px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+a:hover{
+    color: black;
+    background: var(--clr-secondary);
+    box-shadow: 0 0 10px var(--clr-secondary), 
+                0 0 20px var(--clr-secondary), 
+                0 0 30px var(--clr-secondary);
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+/* LINHA DO TOPO*/
+a span:nth-child(1){
+    top: 0; /*pq é linha superior*/
+    left: -100%; /*por causa desse left negativo a linha não aparece, começa da esquerda*/
+    width: 100%; /*vai correr a width inteira*/
+    height: 2px; /*altura da linha que corre*/
+    background-image: linear-gradient(90deg, transparent, var(--clr-secondary)); /*90deg pq corre pra direita*/
+}
+
+a:hover span:nth-child(1){
+    left: 100%; /*agora positivo, a linha aparece*/
+    transition: 1s
+}
+
+/* LINHA DA BASE */
+a span:nth-child(3){
+    bottom: 0; /*linha inferior*/
+    right: -100%; /*começa da direita*/
+    width: 100%; /*corre a width inteira*/
+    height: 2px; /*altura da linha*/
+    background-image: linear-gradient(270deg, transparent, var(--clr-secondary)); /*270deg pq corre pra esquerda*/
+}
+
+a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+/* LINHA DA LATERAL DIREITA */
+a span:nth-child(2){
+    top: -100%; /*começa a correr do topo*/
+    right: 0; /*linha da direita*/
+    width: 2px; /*largura da linha*/
+    height: 100%; /*vai correr a height toda*/
+    background-image: linear-gradient(180deg, transparent, var(--clr-secondary)); /*180deg pq desce*/
+}
+
+a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+/* LINHA DA LATERAL DIREITA */
+a span:nth-child(4){
+    bottom: -100%; /*começa a correr da base*/
+    left: 0; /*linha da esquerda*/
+    width: 2px; /*largura da linha*/
+    height: 100%; /*vai correr a height toda*/
+    background-image: linear-gradient(360deg, transparent, var(--clr-secondary)); /*360deg pq sobe*/
+}
+
+a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
