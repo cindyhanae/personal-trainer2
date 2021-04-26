@@ -19,8 +19,10 @@ a:hover{
     box-shadow: 0 0 10px var(--clr-secondary), 
                 0 0 20px var(--clr-secondary), 
                 0 0 30px var(--clr-secondary);
-    transition: 1s;
-    transition-delay: 1s;
+    /* transition: 1s;
+    transition-delay: 1s; */
+    transition: 0.5s;/* duração do glow do começo ao fim*/
+    transition-delay: 0.5s; /*atraso para o glow*/
 }
 
 a span {
@@ -39,7 +41,8 @@ a span:nth-child(1){
 
 a:hover span:nth-child(1){
     left: 100%; /*agora positivo, a linha aparece*/
-    transition: 1s
+    /* transition: 1s; */
+    transition: 0.5s;
 }
 
 /* LINHA DA BASE */
@@ -53,8 +56,9 @@ a span:nth-child(3){
 
 a:hover span:nth-child(3){
     right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
+    /* transition: 1s;
+    transition-delay: 0.5s; */
+    transition: 0.5s;
 }
 
 /* LINHA DA LATERAL DIREITA */
@@ -68,7 +72,7 @@ a span:nth-child(2){
 
 a:hover span:nth-child(2){
     top: 100%;
-    transition: 1s;
+    transition: 0.5s;
     transition-delay: 0.25s;
 }
 
@@ -83,6 +87,7 @@ a span:nth-child(4){
 
 a:hover span:nth-child(4){
     bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+    
 }
