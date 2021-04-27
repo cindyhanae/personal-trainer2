@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap');
 
 *{
     margin: 0;
@@ -22,6 +23,7 @@
     --font-size-title: 35px;
     --font-size-subtitle: 25px;
     --font-title: font-family: 'Arimo', sans-serif;
+    --font-title-alt: font-family: 'Antonio', sans-serif;
     --font-txt: font-family: 'Work Sans', sans-serif;
 }
 
@@ -45,7 +47,7 @@ header{
     line-height: 4rem;
     color: var(--clr-primary);
     font-size: 2.5rem;
-    font-family: var(--font-title);
+    font-family: var(--font-title-alt);
     font-weight: var(--font-bolder);
     padding-left: 25px;
     text-decoration: none;
@@ -55,9 +57,16 @@ header{
     color: var(--clr-primary);
 }
 
+a.link-navbar:hover{
+    background-color: var(--clr-secondary);
+    border-radius: 5px;
+    color: blue;
+}
+
 /* BANNER SECTION */
 h2{
     color: var(--clr-tertiary);
+    font-family: var(--font-title-alt);
     font-weight: var(--font-bolder);
 }
 span.espacador{
@@ -192,5 +201,121 @@ div.banner>h2{
 
 
 
+/* VANTAGENS */
+#vantagens{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-tertiary);
+}
+
+.vantagens-txt{
+    width: 100%;
+    background-color: var(--clr-tertiary);
+    text-align: center;
+    margin: auto auto;
+}
+
+.vantagens-txt > h3 {
+    color: var(--clr-primary);
+    font-family: var(--font-title-alt);
+    font-weight: var(--font-bolder);
+    font-size: var(--font-size-subtitle);
+}
+
+.vantagens-img{
+    width: 100%;
+    background: url(imagens/scott-webb-5IsdIqwwNP4-unsplash.jpg);
+    background-size: cover;
+    background-position: center top;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 31% 100%);
+}
+p.destaque{
+    padding: 50px 15px;
+    font-size: 18px;
+}
+
+p.destaque > * {
+    color: var(--clr-secondary);
+    font-weight: var(--font-bolder);
+    font-size: 18px;
+}
 
 
+/* PLANOS */
+#planos {
+    min-height: 100vh;
+    background-color: var(--clr-tertiary);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.cartao {
+    width: 100%;
+}
+
+.cartao-body{
+    margin: 40px 15px;
+    width: 90%;
+    height: 70%;
+    box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.53);
+    border-radius: 10px;
+    position: relative;
+}
+
+.cartao-title {
+    color: var(--clr-tertiary);
+    font-family: var(--font-title-alt);
+    background-color: var(--clr-primary);
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul.cartao-content > li {
+    padding: 5px;
+}
+
+.fa-check {
+    color: var(--clr-primary-lighter);
+}
+
+.valor {
+    padding-left: 35px;
+    padding-top: 5px;
+    font-size: var(--font-size-subtitle);
+    font-family: var(--font-title-alt);
+    color: var(--clr-primary-lighter);
+}
+
+.valor-span {
+    color: black;   
+    font-size: var(--font-size);
+}
+
+.button-cartao {
+    position: absolute;
+    bottom: 20px;
+    left: 14%;
+    bottom: 5%;
+}
+
+.custom-shape-divider-bottom-1619468305 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619468305 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 132px;
+}
+
+.custom-shape-divider-bottom-1619468305 .shape-fill {
+    fill: #1B1A22;
+}

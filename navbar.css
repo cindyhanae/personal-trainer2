@@ -81,7 +81,7 @@
 
 #navbar ul li a:hover{
     color: white;
-    background-color: #1b1a22bd;
+    background-color: var(--clr-secondary);
     border-radius: 5px;
 }
 
