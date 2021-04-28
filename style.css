@@ -20,8 +20,9 @@
     --font-size: 15px;
     --font-bold: 600;
     --font-bolder: 700;
-    --font-size-title: 35px;
-    --font-size-subtitle: 25px;
+    --font-size-title: 50px;
+    --font-size-subtitle: 30px;
+    --font-size-subtitle2: 25px;
     --font-title: font-family: 'Arimo', sans-serif;
     --font-title-alt: font-family: 'Antonio', sans-serif;
     --font-txt: font-family: 'Work Sans', sans-serif;
@@ -46,7 +47,7 @@ header{
     height: 4rem;
     line-height: 4rem;
     color: var(--clr-primary);
-    font-size: 2.5rem;
+    font-size: var(--font-size-title);
     font-family: var(--font-title-alt);
     font-weight: var(--font-bolder);
     padding-left: 25px;
@@ -121,14 +122,14 @@ div.banner>h2{
 }
 
 .home-wo{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(imagens/krakenimages-4l8UH4G2_Dg-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/krakenimages-4l8UH4G2_Dg-unsplash.jpg);
     background-position: center center;
     background-size: cover;
 }
 
 
 .gym-wo{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(imagens/total-shape-wXBK9JrM0iU-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/total-shape-wXBK9JrM0iU-unsplash.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -149,8 +150,9 @@ div.banner>h2{
 
 .overlay-title{
     color: var(--clr-secondary);
+    font-size: var(--font-size-subtitle2);
+    font-weight: var(--font-bold);
     padding: 10px 0px;
-    font-size: var(--font-size-title);
 }
 
 .overlay-txt{
@@ -174,7 +176,6 @@ div.banner>h2{
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    cursor: pointer;
     display: flex;
     flex-direction: column;/*coloca os elementos um em cima do outro*/
     align-items: center;
@@ -238,7 +239,7 @@ p.destaque{
 p.destaque > * {
     color: var(--clr-secondary);
     font-weight: var(--font-bolder);
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 
@@ -266,6 +267,7 @@ p.destaque > * {
 .cartao-title {
     color: var(--clr-tertiary);
     font-family: var(--font-title-alt);
+    font-size: var(--font-size-subtitle2);
     background-color: var(--clr-primary);
     text-align: center;
     padding: 20px 0;
@@ -318,4 +320,64 @@ ul.cartao-content > li {
 
 .custom-shape-divider-bottom-1619468305 .shape-fill {
     fill: #1B1A22;
+}
+
+/* DEPOIMENTOS */
+#depoimentos{
+    min-height: 100vh;
+    position: relative;
+}
+
+section#depoimentos > h3 {
+    color: var(--clr-tertiary);
+    font-family: var(--font-title-alt);
+    font-weight: var(--font-bolder);
+    font-size: var(--font-size-subtitle);
+    text-align: center;
+}
+
+.box-depoimento {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.depoimento-img {
+    width: 60%;
+}
+
+.retrato-depoimento {
+    border-radius: 200px;
+    display: flex;
+    margin: 10% 25%;
+}
+
+.depoimento-txt-area{
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+    position: relative;
+}
+
+p.depoimento-txt {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 10px;
+}
+
+p.aluno {
+    text-align: end;
+    padding-right: 20px;
+    color: white;
+}
+
+.fa-quote-left {
+    font-size: 1.5rem;
+    color: #03ca983f;
+}
+
+.fa-quote-right{
+    font-size: 1.5rem;
+    color: #03ca983f;
 }
