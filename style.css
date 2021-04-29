@@ -9,7 +9,6 @@
     font-family: sans-serif;
     font-size: 15px;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 :root{
     --clr-bg: #1B1A22;
@@ -421,8 +420,14 @@ iframe {
 
 .footer-redes{
     display: flex;
-    flex-direction: row;
     width: 100%;
+    position: relative;
+}
+
+.footer-redes > a {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .fa-facebook-square,
@@ -431,4 +436,69 @@ iframe {
     color: var(--clr-secondary);
     font-size: 2rem;
     margin: 10px;
+}
+
+.footer-info {
+    padding: 10px;
+}
+
+/* FORMULÁRIO */
+#teste {
+    background-color: white;
+    height: 60vh;
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.box h5{
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+
+/* :valid é para manter esta configuração abaixo quando estiver preenchido o input */
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+    top: -18px;
+    left: 0;
+    color: gray;
+    font-size: 12px;
+}
+
+.box input[type="submit"]{
+
 }
