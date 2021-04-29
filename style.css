@@ -245,7 +245,7 @@ p.destaque > * {
 
 /* PLANOS */
 #planos {
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: var(--clr-tertiary);
     position: relative;
     display: flex;
@@ -256,7 +256,7 @@ p.destaque > * {
 }
 
 .cartao-body{
-    margin: 40px 15px;
+    margin: 50px 15px;
     width: 90%;
     height: 70%;
     box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.53);
@@ -380,4 +380,55 @@ p.aluno {
 .fa-quote-right{
     font-size: 1.5rem;
     color: #03ca983f;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background: #14121a;
+}
+
+.footer-info{
+    width: 100%;
+    margin: 10px;
+}
+
+div.footer-info > h5 {
+    color: var(--clr-primary);
+    font-size: 1.1rem;
+    font-weight: var(--font-bolder);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+div.footer-info > p { 
+    color: white;
+    margin: 0;
+}
+
+.fa-phone-alt, 
+.fa-envelope, 
+.fa-map-marker-alt {
+    color: var(--clr-secondary);
+    padding-right: 20px;
+}
+
+iframe {
+    margin: 15px;
+}
+
+.footer-redes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.fa-facebook-square,
+.fa-instagram,
+.fa-discord {
+    color: var(--clr-secondary);
+    font-size: 2rem;
+    margin: 10px;
 }
