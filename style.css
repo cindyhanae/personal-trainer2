@@ -23,9 +23,9 @@
     --font-size-title: 50px;
     --font-size-subtitle: 30px;
     --font-size-subtitle2: 25px;
-    --font-title: font-family: 'Arimo', sans-serif;
-    --font-title-alt: font-family: 'Antonio', sans-serif;
-    --font-txt: font-family: 'Work Sans', sans-serif;
+    --font-title:'Arimo', sans-serif;
+    --font-title-alt:'Antonio', sans-serif;
+    --font-txt: 'Work Sans', sans-serif;
 }
 
 body{
@@ -46,11 +46,11 @@ header{
 .logo {
     height: 4rem;
     line-height: 4rem;
+    padding-left: 25px;
     color: var(--clr-primary);
     font-size: var(--font-size-title);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     font-weight: var(--font-bolder);
-    padding-left: 25px;
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ a.link-navbar:hover{
 /* BANNER SECTION */
 h2{
     color: var(--clr-tertiary);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     font-weight: var(--font-bolder);
 }
 span.espacador{
@@ -219,7 +219,7 @@ div.banner>h2{
 
 .vantagens-txt > h3 {
     color: var(--clr-primary);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     font-weight: var(--font-bolder);
     font-size: var(--font-size-subtitle);
 }
@@ -266,7 +266,7 @@ p.destaque > * {
 
 .cartao-title {
     color: var(--clr-tertiary);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     font-size: var(--font-size-subtitle2);
     background-color: var(--clr-primary);
     text-align: center;
@@ -285,7 +285,7 @@ ul.cartao-content > li {
     padding-left: 35px;
     padding-top: 5px;
     font-size: var(--font-size-subtitle);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     color: var(--clr-primary-lighter);
 }
 
@@ -324,13 +324,13 @@ ul.cartao-content > li {
 
 /* DEPOIMENTOS */
 #depoimentos{
-    min-height: 100vh;
+    min-height: 200vh;
     position: relative;
 }
 
 section#depoimentos > h3 {
     color: var(--clr-tertiary);
-    font-family: var(--font-title-alt);
+    font-family: var(--font-title);
     font-weight: var(--font-bolder);
     font-size: var(--font-size-subtitle);
     text-align: center;
@@ -380,4 +380,61 @@ p.aluno {
 .fa-quote-right{
     font-size: 1.5rem;
     color: #03ca983f;
+}
+
+/* CONTATO */
+.box{
+    background-color: var(--clr-tertiary);
+    width: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    box-sizing: border-box;
+    box-shadow: 4px 1px 15px 1px rgba(0,0,0,0.61);
+    border-radius: 10px;
+}
+
+.box h4{
+    color: var(--clr-primary);
+    font-family: var(--font-title);
+    font-weight: var(--font-bold);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    line-height: 50px;
+    border: 1px solid red;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Quando input estiver focado, o label vai ter a seguinte config */
+.box .inputBox input:focus ~ label{
+    top: -10px;
+    left: 0;
+    color: rgba(0, 0, 0, 0.637);
+    font-size: 12px;
 }
