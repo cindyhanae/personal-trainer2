@@ -326,6 +326,8 @@ ul.cartao-content > li {
 #depoimentos{
     min-height: 200vh;
     position: relative;
+    background: rgb(245,245,245);
+    background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(27,26,34,1) 40%);
 }
 
 section#depoimentos > h3 {
@@ -388,19 +390,19 @@ p.aluno {
     width: 50%;
     padding: 40px;
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: 50%;
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, -85%);
     box-sizing: border-box;
     box-shadow: 4px 1px 15px 1px rgba(0,0,0,0.61);
     border-radius: 10px;
 }
 
 .box h4{
-    color: var(--clr-primary);
     font-family: var(--font-title);
-    font-weight: var(--font-bold);
+    font-weight: var(--font-bolder);
     padding-bottom: 20px;
+    color: var(--clr-primary);
     text-align: center;
 }
 
@@ -414,8 +416,7 @@ p.aluno {
     font-size: 16px;
     color: black;
     margin-bottom: 30px;
-    line-height: 50px;
-    border: 1px solid red;
+    border: none;
     border-bottom: 1px solid black;
     outline: none;
     background-color: transparent;
@@ -423,7 +424,7 @@ p.aluno {
 
 .box .inputBox label{
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
     padding: 10px 0;
     font-size: 16px;
@@ -432,9 +433,25 @@ p.aluno {
 }
 
 /* Quando input estiver focado, o label vai ter a seguinte config */
-.box .inputBox input:focus ~ label{
+/* input:valid faz com que o label fixe a seguinte config quando preenchido o input, caso contrário o label desce.*/
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
     top: -10px;
     left: 0;
     color: rgba(0, 0, 0, 0.637);
     font-size: 12px;
+}
+
+.box input[type="submit"]{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    background-color: var(--clr-primary-lighter);
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.box input[type="submit"]:hover{
+    background-color: var(--clr-secondary);
 }
