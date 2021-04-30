@@ -383,6 +383,78 @@ p.aluno {
     color: #03ca983f;
 }
 
+/* CONTATO */
+.box{
+    background-color: var(--clr-tertiary);
+    width: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    box-sizing: border-box;
+    box-shadow: 4px 1px 15px 1px rgba(0,0,0,0.61);
+    border-radius: 10px;
+}
+
+.box h4{
+    font-family: var(--font-title);
+    font-weight: var(--font-bolder);
+    padding-bottom: 20px;
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Quando input estiver focado, o label vai ter a seguinte config */
+/* input:valid faz com que o label fixe a seguinte config quando preenchido o input, caso contrário o label desce.*/
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+    top: -10px;
+    left: 0;
+    color: rgba(0, 0, 0, 0.637);
+    font-size: 12px;
+}
+
+.box input[type="submit"]{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    background-color: var(--clr-primary-lighter);
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.box input[type="submit"]:hover{
+    background-color: var(--clr-secondary);
+}
+
 /* FOOTER */
 footer {
     display: flex;
