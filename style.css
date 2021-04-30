@@ -405,6 +405,7 @@ div.footer-info > h5 {
 div.footer-info > p { 
     color: white;
     margin: 0;
+    padding: 2px;
 }
 
 .fa-phone-alt, 
@@ -442,63 +443,20 @@ iframe {
     padding: 10px;
 }
 
-/* FORMULÁRIO */
-#teste {
-    background-color: white;
-    height: 60vh;
-    position: relative;
+/* RODAPÉ */
+#desenvolvido{
+    height: 40px;
 }
 
-.box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    box-sizing: border-box;
-}
-
-.box h5{
-    margin: 0 0 30px;
-    padding: 0;
+#desenvolvido p{
     text-align: center;
+    color: var(--clr-tertiary);
+    margin-top: 20px;
+    font-size: 14px;
 }
 
-.box .inputBox{
-    position: relative;
+.dev{
+    color: var(--clr-secondary);
+    font-size: 14px;
 }
 
-.box .inputBox input{
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1rem;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid gray;
-    outline: none;
-    letter-spacing: 1px;
-}
-
-.box .inputBox label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 1rem;
-    pointer-events: none;
-    transition: .5s;
-    letter-spacing: 1px;
-}
-
-/* :valid é para manter esta configuração abaixo quando estiver preenchido o input */
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label{
-    top: -18px;
-    left: 0;
-    color: gray;
-    font-size: 12px;
-}
-
-.box input[type="submit"]{
-
-}
