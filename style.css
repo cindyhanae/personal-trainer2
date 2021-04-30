@@ -9,7 +9,6 @@
     font-family: sans-serif;
     font-size: 15px;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 :root{
     --clr-bg: #1B1A22;
@@ -245,7 +244,7 @@ p.destaque > * {
 
 /* PLANOS */
 #planos {
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: var(--clr-tertiary);
     position: relative;
     display: flex;
@@ -256,7 +255,7 @@ p.destaque > * {
 }
 
 .cartao-body{
-    margin: 40px 15px;
+    margin: 50px 15px;
     width: 90%;
     height: 70%;
     box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.53);
@@ -384,74 +383,82 @@ p.aluno {
     color: #03ca983f;
 }
 
-/* CONTATO */
-.box{
-    background-color: var(--clr-tertiary);
-    width: 50%;
-    padding: 40px;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -85%);
-    box-sizing: border-box;
-    box-shadow: 4px 1px 15px 1px rgba(0,0,0,0.61);
-    border-radius: 10px;
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background: #14121a;
 }
 
-.box h4{
-    font-family: var(--font-title);
-    font-weight: var(--font-bolder);
-    padding-bottom: 20px;
+.footer-info{
+    width: 100%;
+    margin: 10px;
+}
+
+div.footer-info > h5 {
     color: var(--clr-primary);
+    font-size: 1.1rem;
+    font-weight: var(--font-bolder);
     text-align: center;
+    margin-bottom: 15px;
 }
 
-.box .inputBox{
+div.footer-info > p { 
+    color: white;
+    margin: 0;
+    padding: 2px;
+}
+
+.fa-phone-alt, 
+.fa-envelope, 
+.fa-map-marker-alt {
+    color: var(--clr-secondary);
+    padding-right: 20px;
+}
+
+iframe {
+    margin: 15px;
+}
+
+.footer-redes{
+    display: flex;
+    width: 100%;
     position: relative;
 }
 
-.box .inputBox input{
+.footer-redes > a {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: black;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-    background-color: transparent;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.box .inputBox label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.5s;
+.fa-facebook-square,
+.fa-instagram,
+.fa-discord {
+    color: var(--clr-secondary);
+    font-size: 2rem;
+    margin: 10px;
 }
 
-/* Quando input estiver focado, o label vai ter a seguinte config */
-/* input:valid faz com que o label fixe a seguinte config quando preenchido o input, caso contrário o label desce.*/
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label{
-    top: -10px;
-    left: 0;
-    color: rgba(0, 0, 0, 0.637);
-    font-size: 12px;
-}
-
-.box input[type="submit"]{
+.footer-info {
     padding: 10px;
-    width: 100px;
-    border: none;
-    background-color: var(--clr-primary-lighter);
-    border-radius: 5px;
-    color: white;
-    transition: 0.3s;
 }
 
-.box input[type="submit"]:hover{
-    background-color: var(--clr-secondary);
+/* RODAPÉ */
+#desenvolvido{
+    height: 40px;
 }
+
+#desenvolvido p{
+    text-align: center;
+    color: var(--clr-tertiary);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.dev{
+    color: var(--clr-secondary);
+    font-size: 14px;
+}
+
