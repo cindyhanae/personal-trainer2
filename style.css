@@ -16,12 +16,15 @@
     --clr-primary-lighter: #FC6D6D;
     --clr-secondary: #03ca98;
     --clr-tertiary: #f5f5f5;
-    --font-size: 15px;
+    
     --font-bold: 600;
     --font-bolder: 700;
+    
+    --font-size: 15px;
     --font-size-title: 50px;
     --font-size-subtitle: 30px;
     --font-size-subtitle2: 25px;
+
     --font-title:'Arimo', sans-serif;
     --font-title-alt:'Antonio', sans-serif;
     --font-txt: 'Work Sans', sans-serif;
@@ -29,6 +32,7 @@
 
 body{
     background-color: var(--clr-bg);
+    font-family: var(--font-txt);
 }
 
 header{
@@ -51,6 +55,12 @@ header{
     font-family: var(--font-title);
     font-weight: var(--font-bolder);
     text-decoration: none;
+}
+
+@media (max-width: 760px){
+    .logo{
+        color: blueviolet;
+    }
 }
 
 .logo:hover {
@@ -274,6 +284,7 @@ p.destaque > * {
 
 ul.cartao-content > li {
     padding: 5px;
+    list-style: none;
 }
 
 .fa-check {
