@@ -85,32 +85,6 @@
     border-radius: 5px;
 }
 
-/* MENU RESPONSIVO */
-@media (max-width: 991px){
-    #navbar{
-        position: fixed;
-        bottom: -100%;
-        right: 0;
-        width: 100%;
-        transition: 0.5s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #navbar.active{
-        height: calc(100vh - 4rem);
-        bottom: 0%;
-        width: 100%;
-    }
-
-    #navbar ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 /* NAV SCROLLED */
 .nav-scrolled{
     background-color: var(--clr-bg);
