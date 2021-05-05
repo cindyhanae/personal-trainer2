@@ -16,8 +16,8 @@
 #toggle::before{
     content: '';
     position: absolute;
-    width: 30px;
-    height: 4px;
+    width: 2rem;
+    height: 0.3rem;
     border-radius: 5px;
     background-color: white;
     transform: translateY(-5px);
@@ -27,8 +27,8 @@
 #toggle::after{
     content: '';
     position: absolute;
-    width: 30px;
-    height: 4px;
+    width: 2rem;
+    height: 0.3rem;
     border-radius: 5px;
     background-color: white;
     transform: translateY(5px);
@@ -54,7 +54,7 @@
 
 /* TAMANHOA DA NAVBAR QUANO EXPANDE */
 #navbar.active {
-    width: 515px;
+    width: 550px;
 }
 
 #navbar ul {
