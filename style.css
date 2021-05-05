@@ -302,6 +302,7 @@ p.destaque > * {
 ul.cartao-content > li {
     padding: 0px 5px 4px 0px;
     list-style: none;
+    font-size: 1rem;
 }
 
 .fa-check {
