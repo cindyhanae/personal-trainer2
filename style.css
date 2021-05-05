@@ -247,10 +247,9 @@ p.destaque > * {
 
 /* PLANOS */
 #planos {
-    min-height: 110vh;
-    padding-top: 20px;
+    min-height: 120vh;
     background-color: var(--clr-tertiary);
-    position: relative; /*para o divisor na diagonal entre a section*/
+    position: relative;
     display: flex;
     flex-direction: row;
 }
@@ -263,12 +262,10 @@ p.destaque > * {
     overflow: hidden; /*faz a borda superior ficar arredondada tambem*/
     border-radius: 10px;
     margin: 50px 15px;
-    height: 450px;
+    width: 90%;
+    height: 70%;
     box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.53);
-    border-radius: 10px;
-    /* position: relative; */
-    overflow: hidden; 
-    /*para deixar a borda superior arredondada. Isso pq, se há conteúdo dentro da div que tem borda curva, eu preciso definir overflow hidden pq caso contrário o overflow da div filho pode dar impressao de que a border-radius nao está funcionando*/
+    position: relative;
 }
 
 .cartao-title {
@@ -278,6 +275,16 @@ p.destaque > * {
     background-color: var(--clr-primary);
     text-align: center;
     padding: 20px 0;
+}
+
+ul.cartao-content > li {
+    padding: 5px;
+    list-style: none;
+    font-size: var(--font-size);
+}
+
+.fa-check {
+    color: var(--clr-primary-lighter);
 }
 
 .valor {
@@ -302,14 +309,9 @@ p.destaque > * {
 
 }
 
-.fa-check {
-    color: var(--clr-primary-lighter);
-}
-
-.button-cartao {
-    position: inherit !important;
-    text-align: center;
-    padding-bottom: 15px; 
+.button-btn{
+    color: black !important;
+    font-size: 1rem;
 }
 
 .btn-card-mobile{
