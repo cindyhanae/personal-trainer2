@@ -1,0 +1,100 @@
+/* MENU RESPONSIVO */
+@media (max-width: 991px){
+    #navbar{
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1b1a2285;
+    }
+
+    #navbar.active{
+        height: calc(100vh - 4.9rem);
+        bottom: 0%;
+        width: 100%;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 800px){
+    html{
+        font-size: 80%;
+        max-width: 100%;
+        max-height: 60vh;
+    }
+
+    div.banner h2,
+    span.espacador{
+        font-size: 5rem;
+    }
+
+    #servicos{
+        display: grid;
+        height: 100vh;
+    }
+
+    .home-wo{
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/home-wo.jpg);
+        background-position: center top;
+    }
+
+    .gym-wo{
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/gym-wo.jpg);
+        background-position: center top;
+    }
+
+    .cf-wo{
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/cf-wo.jpg);
+        background-position: center top; 
+    }
+
+    #vantagens{
+        min-height: 50vh;
+    }
+
+    #planos{
+        min-height: 70vh;
+    }
+
+    .cartao{
+        width: 50%;
+    }
+
+    .button{
+        
+    }
+
+    .divisor-diagonal{
+        display: none;
+    }
+
+    #depoimentos{
+        padding-top: 30px;
+        min-height: 105vh;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 767px){
+    html{
+        font-size: 50%;
+        width: 100%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
