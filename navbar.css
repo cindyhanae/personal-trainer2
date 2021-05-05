@@ -52,7 +52,7 @@
     overflow: hidden;
 }
 
-/* TAMANHOA DA NAVBAR QUANO EXPANDE */
+/* TAMANHO DA NAVBAR QUANO EXPANDE */
 #navbar.active {
     width: 550px;
 }
@@ -94,4 +94,10 @@
 
 ul>li>a.link-scrolled {
     color: white;
+}
+
+
+a.link-navbar:hover{
+    background-color: var(--clr-secondary);
+    border-radius: 5px;
 }

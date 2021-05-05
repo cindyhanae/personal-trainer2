@@ -13,7 +13,7 @@
     }
 
     #navbar.active{
-        height: calc(100vh - 4.9rem);
+        height: calc(100vh - 4rem);
         bottom: 0%;
         width: 100%;
     }
@@ -25,7 +25,19 @@
     }
 }
 
-@media (max-width: 1000px) and (min-width: 800px){
+/* TELAS EXTRA LARGE */
+@media (min-width: 1400px){
+    #planos{
+        min-height: 750px;
+    }
+
+    .cartao-body{
+        height: 500px;
+    }
+}
+
+/* TELAS E TABLET */
+@media (max-width: 1000px) and (min-width: 600px){
     html{
         font-size: 80%;
         max-width: 100%;
@@ -64,6 +76,10 @@
         min-height: 50vh;
     }
 
+    .vantagens-txt{
+        padding-top: 50px;
+    }
+
     #planos{
         min-height: 70vh;
     }
@@ -72,8 +88,8 @@
         width: 50%;
     }
 
-    .button{
-        
+    .button-cartao{
+        transform: translateX(-90%);
     }
 
     .divisor-diagonal{
@@ -81,20 +97,164 @@
     }
 
     #depoimentos{
-        padding-top: 30px;
+        /* padding-top: 30px; */
         min-height: 105vh;
     }
 }
 
-@media (max-width: 767px) and (min-width: 767px){
-    html{
-        font-size: 50%;
+
+/* MOBILE LANDSCAPE */
+@media (max-width: 599px){
+    body, html{
+        overflow-x: hidden;
+    }
+
+    .logo{
+           font-size: 1.3rem;
+       }
+
+    .banner,
+    .conteudo-overlay > a.button,
+    .vantagens-img,
+    .button-cartao,
+    .divisor-diagonal{
+        display: none;
+    }
+       
+    .banner-responsivo2::before{
+        content: "YOUR BEST VERSION";
+        color: var(--clr-tertiary);
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+    }
+
+    #servicos{
+        display: grid;
+    }
+
+    .home-wo{
+        height: 50vh;
+
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/home-mobile.jpg);
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .gym-wo{
+        height: 50vh;
+
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/gym-mobile.jpg);
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .cf-wo{
+        height: 50vh;
+
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(imagens/cf-mobile.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .imgSvg{
+        width: 1.2rem;
+    }
+
+    .overlay-title,
+    .overlay-txt{
+        font-size: 0.8rem;
+    }
+
+    .overlay-title{
+        padding: 0;
+    }
+
+    .overlay-txt{
+        padding: 5px;
+    }
+
+    div.vantagens-txt > p,
+    p.destaque > span {
+        font-size: 1rem;
+    }
+
+    .vantagens-txt h3{
+        padding-top: 30px;
+        font-size: 1.3rem;
+    }
+
+    #planos{
+        display: grid;
+    }
+
+    .cartao-body {
+        height: auto;
+        margin: 20px auto;
+    }
+
+    h4.cartao-title{
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    p.valor{
+        font-size: 1.3rem;
+    }
+
+    .btn-card-mobile{
+        display: block;
+        background-color: var(--clr-primary-lighter);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        margin: 20px auto 40px;
+        transition: 0.3s;
+    }
+
+    .btn-card-mobile:hover{
+        background-color: var(--clr-secondary);
+    }
+
+    section#depoimentos > h3{
+        font-size: 1.3rem;
+    }
+
+    .box-depoimento {
+        flex-direction: column;
+    }
+
+    .depoimento-img,
+    .depoimento-txt-area{
         width: 100%;
+        text-align: center;
+    }
+
+    p.depoimento-txt,
+    i.fa-quote-left,
+    i.fa-quote-right {
+        font-size: 1rem;
+    }
+
+    p.aluno{
+        font-size: 0.8rem;
+    }
+
+    .invert{
+        flex-direction: column-reverse;
     }
 
     footer{
-        display: flex;
         flex-direction: column;
+    }
+
+    div.footer-info > h5,
+    div.footer-info > p{
+        font-size: 1rem;
     }
 }
 
