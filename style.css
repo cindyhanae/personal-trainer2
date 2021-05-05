@@ -62,12 +62,6 @@ header{
     color: var(--clr-primary);
 }
 
-a.link-navbar:hover{
-    background-color: var(--clr-secondary);
-    border-radius: 5px;
-    color: blue;
-}
-
 /* BANNER SECTION */
 div.banner h2{
     position: absolute;
@@ -299,10 +293,13 @@ p.destaque > * {
     font-size: var(--font-size);
 }
 
-ul.cartao-content > li {
-    padding: 0px 5px 4px 0px;
-    list-style: none;
-    font-size: 1rem;
+.button-cartao {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 100%;
+    transform: translateX(-80%);
+
 }
 
 .fa-check {
@@ -313,6 +310,10 @@ ul.cartao-content > li {
     position: inherit !important;
     text-align: center;
     padding-bottom: 15px; 
+}
+
+.btn-card-mobile{
+    display: none;
 }
 
 
@@ -352,6 +353,7 @@ section#depoimentos > h3 {
     font-weight: var(--font-bolder);
     font-size: var(--font-size-subtitle);
     text-align: center;
+    padding-top: 30px;
 }
 
 .box-depoimento {
