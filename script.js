@@ -39,3 +39,33 @@ const homeIntroObserver = new IntersectionObserver(function (entries, homeIntroO
 
 homeIntroObserver.observe(homeIntro)
 
+
+// CARREGAMENTO NO SCROLL
+// seleciono tudo com .fade-in para se chamar de fader.
+const faders = document.querySelectorAll('.fade-in')
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -100px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appesarOnScroll){ 
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            return;
+        } else {
+            entry.target.classList.add('appear')
+            appearOnScroll.unobserve(entry.target)
+        }
+    })
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader)
+})
+
+// seleciono tudo com .slide-in e guardo na const sliders. 
+const sliders = document.querySelectorAll('.slide-in')
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider)
+})
