@@ -52,6 +52,7 @@
     #servicos{
         display: grid;
         height: 100vh;
+        scroll-margin: 20px;
     }
 
     .home-wo{
@@ -74,6 +75,7 @@
 
     #vantagens{
         min-height: 50vh;
+        scroll-margin: 20px;
     }
 
     .vantagens-txt{
@@ -99,6 +101,7 @@
     #depoimentos{
         /* padding-top: 30px; */
         min-height: 105vh;
+        scroll-margin: 50px;
     }
 }
 
@@ -188,6 +191,7 @@
 
     #planos{
         display: grid;
+        scroll-margin: 50px;
     }
 
     .cartao-body {
@@ -218,6 +222,10 @@
 
     .btn-card-mobile:hover{
         background-color: var(--clr-secondary);
+    }
+
+    #depoimentos{
+        scroll-margin: 50px;
     }
 
     section#depoimentos > h3{
