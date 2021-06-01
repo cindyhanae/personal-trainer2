@@ -121,6 +121,7 @@ section div.banner{
     /* background-color: white; */
     display: flex;
     flex-direction: row;
+    scroll-margin: 63px;
 }
 
 .home-wo{
@@ -211,6 +212,7 @@ section div.banner{
     display: flex;
     flex-direction: row;
     background-color: var(--clr-tertiary);
+    scroll-margin: 63px;
 }
 
 .vantagens-txt{
@@ -267,6 +269,7 @@ p.destaque > * {
     position: relative;
     display: flex;
     flex-direction: row;
+    scroll-margin: 30px;
 }
 .cartao {
     width: 100%;
@@ -362,6 +365,7 @@ ul.cartao-content > li {
     background: rgb(245,245,245);
     background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(27,26,34,1) 40%);
     padding-bottom: 10px;
+    scroll-margin: 70px;
 }
 
 section#depoimentos > h3 {
