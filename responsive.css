@@ -127,11 +127,13 @@
     .banner-responsivo2::before{
         content: "YOUR BEST VERSION";
         color: var(--clr-tertiary);
+        font-size: 50px;
+        text-align: center;
         display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-30%, -50%);
+        transform: translate(-50%, -50%);
     }
 
     #servicos{
