@@ -108,12 +108,17 @@
 
 /* MOBILE LANDSCAPE */
 @media (max-width: 599px){
-    body, html{
+    body, 
+    html{
         overflow-x: hidden;
     }
 
+    a.button-btn{
+        font-size: 10px !important;
+    }
+
     .logo{
-           font-size: 1.3rem;
+           font-size: 1.6rem;
        }
 
     .banner,
