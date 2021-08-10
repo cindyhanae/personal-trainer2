@@ -1,5 +1,6 @@
 <h1>Personal Trainer Portfolio</h1>
 <p>Personal project developed with the objective of improving my skills.</p>
+<p><a href="https://cindyhanae.github.io/personal-trainer2/" target="_blank">Link to app</a></p>
 
 <h2>Table of contents</h2>
 <a href="#built">Built with</a> • 
