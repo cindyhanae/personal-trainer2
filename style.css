@@ -44,7 +44,6 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* para o header ficar em cima */
     z-index: 100;
 }
 
@@ -165,7 +164,7 @@ section div.banner{
 }
 
 .box-servico {
-    flex-basis: 100%;/*deixa todas as box de tamanho igual*/
+    flex-basis: 100%;
     justify-content: center;
     align-items: center;
     display: block;
@@ -181,27 +180,24 @@ section div.banner{
     background: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
-    flex-direction: column;/*coloca os elementos um em cima do outro*/
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0; /*vai esconder o conteudo*/
+    opacity: 0;
     transition: linear 0.3s;
 }
 
-/* vou afetar todo child direto de .conteudo-overlay, ou seja, as tags img / h3 / p */
 .conteudo-overlay > * {
     transform: translateY(20px);
     transition: transform 0.3s;
-    /* primeiro eu faço o conteúdo sumir para depois no hover eu mudar o translateY e fazer aparecer */
 }
 
 .conteudo-overlay:hover{
-    opacity: 1; /*mostra o conteúdo*/
+    opacity: 1; 
 }
 
 .conteudo-overlay:hover > * {
     transform: translateY(0);
-    /*fazendo aparecer do bottom*/
 }
 
 
@@ -253,12 +249,12 @@ p.destaque > * {
 
 /* FADE IN */
 .fade-in{
-    opacity: 0; /* deixa transparente*/
-    transition: opacity 250ms ease-in;/* adicionar uma transição à opacity */
+    opacity: 0; 
+    transition: opacity 250ms ease-in;
 }
 
 .fade-in.appear{
-    opacity: 1;/*quando combinado o fade-in com appear, volta a ficar visível*/
+    opacity: 1;
 }
 
 
@@ -361,7 +357,6 @@ ul.cartao-content > li {
 /* DEPOIMENTOS */
 #depoimentos{
     height: auto;
-    /* position: relative; */
     background: rgb(245,245,245);
     background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(27,26,34,1) 40%);
     padding-bottom: 10px;
@@ -381,7 +376,6 @@ section#depoimentos > h3 {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    /* border: 1px solid red; */
 }
 
 .depoimento-img {
@@ -398,7 +392,6 @@ section#depoimentos > h3 {
     width: 100%;
     height: 100%;
     margin: auto auto;
-    /* position: relative; */
 }
 
 p.depoimento-txt {
@@ -428,12 +421,12 @@ p.aluno {
 .from-left{
     transform: translateX(-50%);/*move o elemento 50% para a esquerda. É a partir da onde vai iniciar a transition*/
     transition: opacity 250ms ease-in, 
-                transform 400ms ease-in; /*definindo que transform e opacity vão sofrer transition de 400ms e 250ms*/
+                transform 400ms ease-in; 
     opacity: 0;
 }
 
 .from-right{
-    transform: translateX(50%); /*move elemento 50% para direita*/
+    transform: translateX(50%); 
     transition: transform 400ms ease-in; 
     
     opacity: 0;
@@ -443,7 +436,6 @@ p.aluno {
 .from-left.appear,
 .from-right.appear{
     transform: translateX(0);
-    /*quando ambos estiverem combinados com .appear, eles sofrerão um transform translateX = 0 para voltar à posiçao original*/
     opacity: 1;
 }
 
@@ -600,6 +592,12 @@ iframe {
 .dev{
     color: var(--clr-secondary);
     font-size: 0.8rem;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.dev:hover{
+    color: var(--clr-primary-lighter);
 }
 
 
