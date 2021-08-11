@@ -20,7 +20,7 @@
 </ul>
 
 <h2 id="description">Description</h2>
-<p>Personal trainer's portfolio developed with the objective of improving my skills with HTML, CSS and Javascript. I used vanilla JS to create the mobile menu, the banner and the scroll effect. Specifically I used intersection observer on the scroll fade effect. For the banner I used keyframes.</p>
+<p>Personal trainer's portfolio developed with the objective of improving my skills with HTML, CSS and Javascript. I used vanilla JS to create the mobile menu, the banner and the scroll effect. Specifically I used intersection observer on the scroll fade effect. For the banner I applied keyframes and CSS for the diagonal dividers.</p>
 
 <h2 id="status">Status</h2>
 Finished :heavy_check_mark:
